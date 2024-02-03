@@ -1,0 +1,25 @@
+{
+  "usuarios": [
+    {
+      "id": 0,
+      "nome": "Jocimar",
+      "sobrenome": "Rodrigues",
+      "foto": "https://avatars.githubusercontent.com/u/116130103?v=4",
+      "status": "ativo"
+    },
+    {
+      "id": 1,
+      "nome": "Kaguya",
+      "sobrenome": "Sama",
+      "foto": "https://i.ytimg.com/vi/_NkxM_uLUpw/maxresdefault.jpg",
+      "status": "aguardando"
+    },
+    {
+      "id": 2,
+      "nome": "Fujiwara",
+      "sobrenome": "Kun",
+      "foto": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/Chika_Fujiwara_Anime.jpg/220px-Chika_Fujiwara_Anime.jpg",
+      "status": "inativo"
+    }
+  ]
+}

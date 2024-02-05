@@ -12,7 +12,9 @@ import HelloWorld from './components/HelloWorld.vue'
 
       <nav>
         <RouterLink to="/">Props 1 forma</RouterLink>
-        <RouterLink to="/Props2Forma">About</RouterLink>
+        <RouterLink to="/Props2Forma">Props 2 Forma</RouterLink>
+        <RouterLink to="/Props3Forma">Props 3 Forma</RouterLink>
+        
       </nav>
     </div>
   </header>

@@ -16,16 +16,15 @@ export default defineComponent({
             inativo: "red"
         }
 
-        // const buscarUsuario = computed(() => { return data.value = await apiService.fetchUserById(idUsuario.value)} )
         const filtrar = computed(() => {
-      return  data.value.status
-        ? data.value.status == 'ativo'
-          ? colors.ativo
-          : data.value.status == 'aguardando'
-          ? colors.aguardando
-          : colors.inativo
-        : '';
-    });
+            return data.value.status
+                ? data.value.status == 'ativo'
+                    ? colors.ativo
+                    : data.value.status == 'aguardando'
+                        ? colors.aguardando
+                        : colors.inativo
+                : '';
+        });
 
 
 
@@ -71,7 +70,4 @@ export default defineComponent({
     width: 300px;
     height: 300px;
 }
-
-
-
 </style>

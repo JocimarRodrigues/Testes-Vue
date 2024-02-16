@@ -1,6 +1,6 @@
 <template>
   <div class="flex w-full gap-5 justify-center">
-    <q-card style="width: 40vw">
+    <q-card style="width: 40vw" class="h-full w-[40vw] bg-[--q-primary]">
       <q-card-section>
         <q-banner rounded class="col-span-3">
           <img

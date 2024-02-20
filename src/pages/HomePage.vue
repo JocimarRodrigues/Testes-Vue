@@ -1,12 +1,10 @@
 <template>
   <div class="flex w-full gap-5 justify-center">
-    <q-card style="width: 40vw" class="h-full w-[40vw] bg-[--q-primary]">
+    <q-card style="width: 40vw;" class="h-full w-[40vw] bg-[--q-primary]">
       <q-card-section>
         <q-banner rounded class="col-span-3">
-          <img
-            src="https://cdn.quasar.dev/img/mountains.jpg"
-            class="col-span-3 row-span-1 w-full"
-          />
+          <q-img :ratio="16 / 9" src="https://cdn.quasar.dev/img/mountains.jpg" style="max-height: 220px;">
+          </q-img>
         </q-banner>
       </q-card-section>
       <q-card-section class="grid grid-cols-2 gap-10">
@@ -25,11 +23,7 @@
       </q-card-section>
     </q-card>
     <q-card style="width: 20vw; height: max-content">
-      <q-card-section
-        style="width: 650px"
-        v-for="cli in clientes"
-        :key="cli.nome"
-      >
+      <q-card-section style="width: 650px" v-for="cli in clientes" :key="cli.nome">
         <h1>News</h1>
         <div v-for="value in values" :key="value">
           <p>{{ cli[value.key] }}</p>

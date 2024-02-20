@@ -9,8 +9,10 @@
         notice shrink property since we are placing it
         as child of QToolbar
       -->
-        <q-tabs v-model="tab" shrink>
-          <q-tab name="tab1" label="Tab 1" />
+        <q-tabs>
+          <router-link to="/dialog">
+            <q-tab name="tab1" label="Dialog" />
+          </router-link>
           <q-tab name="tab2" label="Tab 2" />
           <q-tab name="tab3" label="Tab 3" />
         </q-tabs>
@@ -24,51 +26,8 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
+import { useRouter } from 'vue-router';
 
-const linksList = [
-  {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-  {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
-  }
-];
 
 export default defineComponent({
   name: 'MainLayout',
@@ -80,15 +39,19 @@ export default defineComponent({
   setup() {
     const leftDrawerOpen = ref(false)
 
+    const router = useRouter()
+
+
     return {
-      essentialLinks: linksList,
       leftDrawerOpen,
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value
       },
       setup() {
+
         return {
-          tab: ref('')
+          tab: ref(''),
+          router
         }
       }
     }
